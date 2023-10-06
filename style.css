@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue", "Helvetica", "Arial";
+}
+
+/* ======================== variaveis ======================== */
+
+:root {
+    --background: #FFD5D6;
+    --rightSide-background:  #A6586D;
+    --box-background: #FFC0DB;
+    --dark-pink: #CF5D8E;
+    --light-pink: #F46EA8;
+}
+
+/* ======================== body ======================== */
+
+body, 
+.right-side,
+.icon,
+.checkbox-child,
+.second-text-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    background-color: var(--background)
+}
+
+/* ======================== container ======================== */
+
+.container{
+    position: fixed;
+    width: 80vw;
+    height: 90vh;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ======================== right-side ======================== */
+
+.right-side{
+    border-top-left-radius: 30px; 
+    width: 50%;
+    height: 100%;
+    background-color:  var(--rightSide-background);
+    flex-direction: column;
+}
+
+.logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.logo img{
+    width: 30px;
+    height: 30px;
+}
+
+.logo h2{
+    font-size: 12px;
+    color: #FFF;
+    font-family: 'Charmonman', cursive;
+   
+}
+
+.box{
+    background-color: var(--box-background);
+    margin-left: 40px;
+    margin-right: 40px;    
+    border-radius: 3px;
+}
+
+.child-form{
+    display: flex;
+    align-items: center;
+}
+
+.child-form svg{
+    padding-bottom: 5px;
+}
+
+h1{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.form{
+    margin: 40px 70px 40px 70px;
+}
+
+.fist-text-form{
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs-container{
+    padding-bottom: 20px;
+}
+
+.input-grup{
+    position: relative;
+}
+
+#camp{
+    width: 100%;
+    outline: none;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 10px;
+    padding-left: 30px;
+}
+
+.icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30px;
+    height: 100%;
+}
+
+.second-icon{
+    position: absolute;
+    left: 90%;
+    top: 0;
+    width: 25px;
+    height: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    align-items: center;
+}
+
+.custom-checkbox{
+    display: none;
+}
+
+.custom-checkbox + label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid gray;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+  }
+  
+.custom-checkbox:checked + label::before {
+    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 10 10'%3E%3Cg class='nc-icon-wrapper' stroke-width='1' fill='%23555555'%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' data-cap='butt' d='M2.83 4.72l1.58 1.58 2.83-2.83'/%3E%3C/g%3E%3C/svg%3E");
+    background-color: var(--dark-pink);
+    background-position: center;
+    border: none;
+    padding: 1px;
+}
+
+.label-check{
+    cursor: pointer;
+}
+
+#camp:focus{
+    border: 1px solid var(--dark-pink);
+    box-shadow: 0 0 8px var(--dark-pink);
+}
+
+#camp:focus + .icon .svg-icon {
+    stroke: var(--dark-pink);
+}
+
+a{
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--light-pink);
+}
+
+a:hover{
+    color: var(--dark-pink);
+}
+
+button{
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: var(--light-pink);
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+}
+
+button:hover{
+    background-color: var(--dark-pink);
+}
+
+.second-text-form a{
+    font-size: 15px;
+    margin-left: 5px; 
+    font-weight: bold;
+}
+
+
+/* ======================== left-side ======================== */
+
+.left-side{
+    border-top-right-radius: 30px; 
+    background-image: url('./assets/rosas.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    height: 100%;
+}
+
+
+/* ======================== responsividade ======================== */
+/* ======================== not - telas menores ======================== */
+
+@media (max-width: 1024px){
+
+    .box{
+        width: 80%;
+        height: 70%;
+    }
+
+    h1{
+        font-size: 25px;
+    }
+
+    .fist-text-form{
+        font-size: 13px;
+    }
+
+    .input-grup{
+        padding-top: 5px;
+    }
+
+    .second-icon{
+        left: 85%;
+    }
+
+    .form{
+        margin: 20px 35px 20px 35px;
+    }
+
+    .custom-checkbox + label::before {
+        width: 12px;
+        height: 12px;
+    }
+
+    .checkbox label, .checkbox a {
+        font-size: 14px;
+    }
+
+    .second-text-form,  .second-text-form a{
+        font-size: 14px;
+    }
+}
+
+/* ======================== tablets ======================== */
+@media (max-width: 768px){
+
+    .box{
+        width: 80%;
+        height: 70%;
+    }
+
+    .child-form svg{
+        width: 25px;
+        height: 25px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+
+    .fist-text-form{
+        font-size: 10px;
+        padding-bottom: 10px;
+    }
+
+    .inputs-container{
+        padding-bottom: 10px;
+    }
+
+    .form{
+        margin: 20px 35px 20px 35px;
+    }
+
+    label{
+        font-size: 12px;
+    }
+
+    ::placeholder{
+        font-size: 10px;
+    }
+
+    .icon svg{
+        width: 15px;
+        height: 15px;
+    }
+
+    .second-icon{
+        left: 80%;
+        top: 25%;
+    }
+
+    .second-icon svg{
+        width: 20px;
+        height: 20px;
+    }
+
+    .custom-checkbox + label::before {
+        width: 10px;
+        height: 10px;
+    }
+
+    .checkbox{
+        padding-bottom: 10px;
+    }
+
+    .checkbox label,  .checkbox a {
+        font-size: 10px;
+    }
+
+    button{
+        padding: 10px;
+    }
+
+    .second-text-form, .second-text-form a{
+        font-size: 10px;
+    }
+
+}  
+
+/* ======================== celulares-atual ======================== */
+
+@media(max-width:425px){
+    .container{
+        flex-direction: column;
+    }
+
+    .right-side, .left-side{
+        width: 100%;
+    }
+
+    .right-side{
+        border-top-right-radius: 30px;
+    }
+
+    .left-side{
+        border-radius: 0px;
+        height: 20%;
+    }
+
+    .box{
+        height: 75%;
+        margin-top: 80px;
+        width: 90%;
+    }
+
+    .form{
+        margin-bottom: 50px;
+    }
+    
+}
+
+/* ======================== celulares-antigos ======================== */
+
+@media (max-width: 320px){
+    h1{
+        font-size: 15px;
+    }
+
+    .checkbox label,  .checkbox a {
+        font-size: 9px;
+    }
+}
