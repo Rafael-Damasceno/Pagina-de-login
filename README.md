@@ -6,7 +6,7 @@ Projeto construído como avaliação da Capacitação do processo trainee
 
 > finalizado, porem com pretenções de aprimoramento
 
-![Preview](./src/.github/Preview.png)
+![Preview](./assets/.github/Preview.png)
 
 [Clique aqui para acessar]()
 ## Tecnologias:
